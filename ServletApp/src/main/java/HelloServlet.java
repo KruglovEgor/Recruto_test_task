@@ -21,6 +21,21 @@ public class HelloServlet extends HttpServlet {
         }
 
         resp.setContentType("text/html;charset=UTF-8");
+
+//        easier variant
+//        resp.getWriter().println("<h1>Hello " + name + "! " + message + "!</h1>");
+
+        resp.setContentType("text/html;charset=UTF-8");
+        resp.getWriter().println("<!DOCTYPE html>");
+        resp.getWriter().println("<html>");
+        resp.getWriter().println("<head>");
+        resp.getWriter().println("<style>");
+        resp.getWriter().println("body { text-align: center; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }");
+        resp.getWriter().println("</style>");
+        resp.getWriter().println("</head>");
+        resp.getWriter().println("<body>");
         resp.getWriter().println("<h1>Hello " + name + "! " + message + "!</h1>");
+        resp.getWriter().println("</body>");
+        resp.getWriter().println("</html>");
     }
 }
