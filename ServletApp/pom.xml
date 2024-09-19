@@ -4,6 +4,10 @@
   <groupId>org.example</groupId>
   <artifactId>ServletApp</artifactId>
   <packaging>war</packaging>
+  <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+  </properties>
   <version>1.0-SNAPSHOT</version>
   <name>ServletApp Maven Webapp</name>
   <url>http://maven.apache.org</url>
@@ -14,6 +18,13 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+      <dependency>
+          <groupId>jakarta.platform</groupId>
+          <artifactId>jakarta.jakartaee-api</artifactId>
+          <version>9.0.0</version>
+      </dependency>
+
+
   </dependencies>
   <build>
     <finalName>ServletApp</finalName>
